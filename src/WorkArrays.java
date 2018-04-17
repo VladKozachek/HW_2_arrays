@@ -84,5 +84,13 @@ public class WorkArrays {
         }
         System.out.println("Минимальный из четных элементов : " + arr[indexMin]);
     }
-
+    public void signReplacement(){  //Изменение отрицательного знака на положительный
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]<0){
+                arr[i]=Math.abs(arr[i]);
+            }
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
     }
+}

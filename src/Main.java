@@ -2,10 +2,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Random random=new Random();
+
          int [] arr=new int[20];
          for (int i=0;i<arr.length;i++){
-             arr[i]=random.nextInt(100);
+             arr[i]=(int) (Math.random()*(200+1))-100;
          }
 
         WorkArrays workArrays = new WorkArrays(arr);
@@ -17,5 +17,6 @@ public class Main {
         workArrays.sumRangeEventElements();
         workArrays.maxEventElements();
         workArrays.minEventElements();
+        workArrays.signReplacement();
     }
 }
