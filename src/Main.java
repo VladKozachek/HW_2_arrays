@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random=new Random();
-         int [] arr=new int[10];
+         int [] arr=new int[20];
          for (int i=0;i<arr.length;i++){
              arr[i]=random.nextInt(100);
          }
@@ -13,6 +13,9 @@ public class Main {
         workArrays.outputElementsReverse();
         workArrays.maxElement();
         workArrays.minElement();
-        workArrays.sumOddElements();
+        workArrays.sumEventElements();
+        workArrays.sumRangeEventElements();
+        workArrays.maxEventElements();
+        workArrays.minEventElements();
     }
 }

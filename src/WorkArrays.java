@@ -39,16 +39,50 @@ public class WorkArrays {
         }
         System.out.println("Min element : "+arr[indexMin]+ " Index : "+ indexMin);
     }
-    public void sumOddElements(){
+    public void sumEventElements(){ //Сумма и колитчество четных элементов
         int count=0;
         int summ=0;
         for (int i=0;i<arr.length;i++){
-            if(arr[i]%2 != 0){
+            if(arr[i]%2 == 0){
                 count++;
                 summ=summ+arr[i];
             }
         }
-        System.out.println("Количество нечетных элементов : "+count+" Сумма нечетных элементов : "+ summ );
+        System.out.println("Количество четных элементов : "+count+" Сумма четных элементов : "+ summ );
+    }
+    public void sumRangeEventElements(){ //Сумма и колитчество четных элементов в диапазоне от 20 до 30
+        int count=0;
+        int summ=0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]>=20&&arr[i]<=30&&arr[i]%2 == 0){
+                count++;
+                summ=summ+arr[i];
+            }
+        }
+        System.out.println("Количество четных элементов : "+count+" Сумма четных элементов : "+ summ );
     }
 
-}
+    public void maxEventElements(){ //Максимальный из четных элементов
+        int indexMax=0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]%2 == 0){
+                if(arr[i]>arr[indexMax]){
+                    indexMax=i;
+                }
+            }
+        }
+        System.out.println("Максимальный из четных элементов : "+arr[indexMax]);
+    }
+    public void minEventElements() { //Минимальный из четных элементов
+        int indexMin = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                if (arr[i] < arr[indexMin]) {
+                    indexMin = i;
+                }
+            }
+        }
+        System.out.println("Минимальный из четных элементов : " + arr[indexMin]);
+    }
+
+    }
