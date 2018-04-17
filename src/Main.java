@@ -13,5 +13,6 @@ public class Main {
         workArrays.outputElementsReverse();
         workArrays.maxElement();
         workArrays.minElement();
+        workArrays.sumOddElements();
     }
 }
