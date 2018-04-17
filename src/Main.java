@@ -3,5 +3,6 @@ public class Main {
         WorkArrays workArrays = new WorkArrays();
         workArrays.fillArray();
         workArrays.outputElementsReverse();
+        workArrays.maxElement();
     }
 }

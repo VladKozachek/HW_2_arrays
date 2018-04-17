@@ -16,5 +16,15 @@ public class WorkArrays {
             System.out.print(arr[i-1]);
             System.out.print(" ");
         }
+        System.out.println();
+    }
+    public void maxElement(){
+        int indexMax=0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]>arr[indexMax]){
+                indexMax=i;
+            }
+        }
+        System.out.print("Max element : "+arr[indexMax]+ " Index : "+ indexMax);
     }
 }
