@@ -18,5 +18,6 @@ public class Main {
         workArrays.maxEventElements();
         workArrays.minEventElements();
         workArrays.signReplacement();
+        workArrays.incrementAndDecrement();
     }
 }

@@ -92,5 +92,19 @@ public class WorkArrays {
             System.out.print(item);
             System.out.print(" ");
         }
+        System.out.println();
+    }
+    public void incrementAndDecrement (){  //инкрементирование положительного числа и декрементирование отрицательного
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>0){
+                arr[i]++;
+            }
+            else if(arr[i]<0){
+                arr[i]--;
+            }
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+        System.out.println();
     }
 }
