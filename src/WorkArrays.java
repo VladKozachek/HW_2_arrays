@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class WorkArrays {
     private int [] arr=new int[10];
@@ -8,6 +7,7 @@ public class WorkArrays {
     }
 
     public void fillArray(){  // заполняем массив случайными числавми и выводим на экран
+        System.out.print("Вывод массива : ");
         for (int i=0;i<arr.length;i++){
             System.out.print(arr[i]);
             System.out.print(" ");
@@ -15,6 +15,7 @@ public class WorkArrays {
         System.out.println();
     }
     public void outputElementsReverse(){  // выводи массив в обратном порядке
+        System.out.print("Вывод массива в обратном порядке : ");
         for (int i=arr.length;i>0;i--){
             System.out.print(arr[i-1]);
             System.out.print(" ");
@@ -42,10 +43,10 @@ public class WorkArrays {
     public void sumEventElements(){ //Сумма и колитчество четных элементов
         int count=0;
         int summ=0;
-        for (int i=0;i<arr.length;i++){
-            if(arr[i]%2 == 0){
+        for (int item:arr){
+            if(item%2 == 0){
                 count++;
-                summ=summ+arr[i];
+                summ=summ+item;
             }
         }
         System.out.println("Количество четных элементов : "+count+" Сумма четных элементов : "+ summ );
@@ -53,13 +54,13 @@ public class WorkArrays {
     public void sumRangeEventElements(){ //Сумма и колитчество четных элементов в диапазоне от 20 до 30
         int count=0;
         int summ=0;
-        for (int i=0;i<arr.length;i++){
-            if(arr[i]>=20&&arr[i]<=30&&arr[i]%2 == 0){
+        for (int item:arr){
+            if(item>=20&&item<=30&&item%2 == 0){
                 count++;
-                summ=summ+arr[i];
+                summ=summ+item;
             }
         }
-        System.out.println("Количество четных элементов : "+count+" Сумма четных элементов : "+ summ );
+        System.out.println("Количество четных элементов в диапазоне от 20 до 30 : "+count+" Сумма четных элементов : "+ summ );
     }
 
     public void maxEventElements(){ //Максимальный из четных элементов
@@ -85,6 +86,7 @@ public class WorkArrays {
         System.out.println("Минимальный из четных элементов : " + arr[indexMin]);
     }
     public void signReplacement(){  //Изменение отрицательного знака на положительный
+        System.out.print("Замена - на + :");
         for (int item :arr){
             if(item<0){
                 item=Math.abs(item);
@@ -95,16 +97,33 @@ public class WorkArrays {
         System.out.println();
     }
     public void incrementAndDecrement (){  //инкрементирование положительного числа и декрементирование отрицательного
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>0){
-                arr[i]++;
+        System.out.print("Инкрементирование положительного числа и декрементирование отрицательного :");
+        for(int item:arr){
+            if(item>0){
+                item++;
             }
-            else if(arr[i]<0){
-                arr[i]--;
+            else if(item<0){
+                item--;
             }
-            System.out.print(arr[i]);
+            System.out.print(item);
             System.out.print(" ");
         }
         System.out.println();
+    }
+    public void average(){  //Cреднее арифметическое массива и количество элементов больших среднего арифметического
+        int temp=0;
+        int count=0;
+        int average=0;
+        for(int item:arr){
+            temp=temp+item;
+        }
+        average=temp/arr.length;
+        for (int item:arr){
+            if(item>average){
+                count++;
+            }
+        }
+        System.out.println("Cреднее арифметическое "+average+" количество элементов больших среднего арифметического : "+count);
+
     }
 }
