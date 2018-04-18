@@ -27,5 +27,6 @@ public class Main {
         WorkArrays workArrays2=new WorkArrays(arr,arr2);
         workArrays2.pairSumElements();
         workArrays2.concatenatingArrays();
+        workArrays.replacMaxByMin();
     }
 }

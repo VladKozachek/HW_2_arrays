@@ -184,4 +184,33 @@ public class WorkArrays {
         System.out.println();
     }
 
+    public void replacMaxByMin(){  //меняем минимум и максимум местами
+        int indexMax=0;
+        int indexMin=0;
+        for (int item:arr){
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]<arr[indexMin]){
+                indexMin=i;
+            }
+        }
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]>arr[indexMax]){
+                indexMax=i;
+            }
+        }
+        System.out.println();
+        System.out.println("Min element : "+arr[indexMin]);
+        System.out.println("Max element : "+arr[indexMax]);
+        int temp=arr[indexMin];
+        arr[indexMin]=arr[indexMax];
+        arr[indexMax]=temp;
+        for (int item:arr){
+            System.out.print(item);
+            System.out.print(" ");
+        }
+    }
+
 }
