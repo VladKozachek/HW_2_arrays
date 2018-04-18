@@ -1,9 +1,15 @@
 
 public class WorkArrays {
-    private int [] arr=new int[10];
+    private int [] arr;
+    private int [] arr2;
+
 
     public WorkArrays(int[] arr) {
         this.arr = arr;
+    }
+    public WorkArrays(int []arr,int [] arr2){
+        this.arr=arr;
+        this.arr2=arr2;
     }
 
     public void fillArray(){  // заполняем массив случайными числавми и выводим на экран
@@ -124,6 +130,28 @@ public class WorkArrays {
             }
         }
         System.out.println("Cреднее арифметическое "+average+" количество элементов больших среднего арифметического : "+count);
-
     }
+    public void pairSumElements(){   //Cозается третий массив , как попарная сумма двух массивов
+        int [] arr3 = new int[arr.length];
+        System.out.print("arr1 : ");
+        for (int item:arr){   //вывод массива 1
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.print("arr2 : ");
+        for (int item:arr2){     //вывод массива 2
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.print("arr3 : ");
+       for (int i=0;i<arr.length;i++){    //сумируется сумма элементов 1 и 2 и записывпется в массив 3
+           arr3[i]=arr[i]+arr2[i];
+           System.out.print(arr3[i]);
+           System.out.print(" ");
+       }
+        System.out.println();
+    }
+
 }
