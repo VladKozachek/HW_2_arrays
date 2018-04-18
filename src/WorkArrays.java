@@ -154,4 +154,34 @@ public class WorkArrays {
         System.out.println();
     }
 
+
+    public void concatenatingArrays(){   //Cозается третий массив , как конкатенация двух массивов
+        int [] arr3 = new int[arr.length+arr2.length];
+        System.out.print("arr1 : ");
+        for (int item:arr){   //вывод массива 1
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.print("arr2 : ");
+        for (int item:arr2){     //вывод массива 2
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.print("arr3 : ");
+
+        for (int i=0;i<arr.length;i++){    //конкатенация первого массивов в массив 3
+            arr3[i]=arr[i];
+            System.out.print(arr3[i]);
+            System.out.print(" ");
+        }
+        for (int i=0;i<arr2.length;i++){    //конкатенация второго массивов в массив 3
+            arr3[i]=arr2[i];
+            System.out.print(arr3[i]);
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
 }
