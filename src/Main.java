@@ -30,6 +30,7 @@ public class Main {
         workArrays.replacMaxByMin();
         workArrays.deleteMaxAndMin();
         workArrays2.divideIntoTwo();
+        workArrays2.divideIntoTwoOddNumbers();
 
     }
 }

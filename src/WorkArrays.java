@@ -298,6 +298,48 @@ public class WorkArrays {
     }
 
 
+    public void divideIntoTwoOddNumbers(){ //создаем массив из двух,в  котором числа являются непарными
+        System.out.println("Создаем массив из двух,в  котором числа являются непарными");
 
+        int arr3[] = new int[arr.length+arr2.length];
+
+        int count=0;
+
+        System.out.print(" Исходный массив 1: ");
+        for(int item:arr){         // Исходный массив 1
+            System.out.print(item+" ");
+        }
+        System.out.print(" Исходный массив 1: ");
+        for(int item:arr2){         // Исходный массив 2
+            System.out.print(item+" ");
+        }
+        System.out.println();
+
+
+
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+                arr3[count]=arr[i];
+                count++;
+            }
+        }
+
+        for (int i=0;i<arr2.length;i++){
+            if(arr2[i]%2!=0){
+                arr3[count]=arr2[i];
+                count++;
+            }
+        }
+
+        for (int item:arr3){
+            if(item==0){
+                break;
+            }
+            System.out.print(item+" ");
+        }
+
+
+
+    }
 
 }
