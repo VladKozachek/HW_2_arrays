@@ -213,4 +213,45 @@ public class WorkArrays {
         }
     }
 
+    public void deleteMaxAndMin() {  //убираем максимум и минимум
+        int indexMax = 0;
+        int indexMin = 0;
+        for (int item : arr) {
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < arr[indexMin]) {
+                indexMin = i;
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[indexMax]) {
+                indexMax = i;
+            }
+        }
+        System.out.println();
+        System.out.println("Min element : " + arr[indexMin]);
+        System.out.println("Max element : " + arr[indexMax]);
+
+
+        int count=arr.length;
+        int[] tempsArr = new int[indexMax];
+        for (int i=0;i<count-1;i++) {
+
+            if(arr[i]==arr[indexMax]){
+                tempsArr[i]=0;
+            }
+            else{
+                tempsArr[i]=arr[i];
+            }
+
+           System.out.print(tempsArr[i]);
+            System.out.print(" ");
+        }
+
+
+    }
+
+
 }
