@@ -2,7 +2,7 @@
 public class Main {
     public static void main(String[] args) {
 
-         int [] arr=new int[5];
+         int [] arr=new int[10];
          for (int i=0;i<arr.length;i++){
              arr[i]=(int) (Math.random()*(100+1))-50; //случайные числа от -50 до 50
          }
@@ -20,7 +20,7 @@ public class Main {
         workArrays.incrementAndDecrement();
         workArrays.average();
 
-        int [] arr2=new int[5];
+        int [] arr2=new int[10];
         for (int i=0;i<arr2.length;i++){
             arr2[i]=(int) (Math.random()*(100+1))-50; //случайные числа от -50 до 50
         }
@@ -29,6 +29,7 @@ public class Main {
         workArrays2.concatenatingArrays();
         workArrays.replacMaxByMin();
         workArrays.deleteMaxAndMin();
+        workArrays2.divideIntoTwo();
 
     }
 }

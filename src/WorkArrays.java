@@ -251,6 +251,50 @@ public class WorkArrays {
            System.out.print(arr[i]);
             System.out.print(" ");
         }
+        System.out.println();
+    }
+
+
+    public void divideIntoTwo(){ //делим массив на два, положительный и отрицательный
+        System.out.println("Делим массив на два, положительный и отрицательный");
+
+        int arr3[] = new int[arr.length];
+        int arr4[] = new int[arr.length];
+
+        int count=0;
+        int count2=0;
+        for(int item:arr2){         // Исходный массив
+            System.out.print(item+" ");
+        }
+        System.out.println();
+
+        for (int i=0;i<arr2.length;i++){   // Находим отрицательный числа и записываем в массив arr3
+            if(arr2[i]<0){
+                arr3[count]=arr2[i];
+                count++;
+            }
+        }
+        System.out.print("Массив отрицательных чисел : ");
+        for (int item:arr3){  // выводим массив arr3
+            if(item==0){
+                break;
+            }
+            System.out.print(item+" ");
+        }
+
+        for (int i=0;i<arr2.length;i++){  // Находим отрицательный числа и записываем в массив arr4
+            if(arr2[i]>0){
+                arr4[count2]=arr2[i];
+                count2++;
+            }
+        }
+        System.out.print("Массив отрицательных чисел : ");
+        for (int item:arr4){  // выводим массив arr3
+            if(item==0){
+                break;
+            }
+            System.out.print(item+" ");
+        }
     }
 
 
