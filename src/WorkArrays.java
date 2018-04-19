@@ -187,6 +187,8 @@ public class WorkArrays {
     public void replacMaxByMin(){  //меняем минимум и максимум местами
         int indexMax=0;
         int indexMin=0;
+        System.out.println("Меняем минимум и максимум местами :");
+        System.out.println("Исходный массив: ");
         for (int item:arr){
             System.out.print(item);
             System.out.print(" ");
@@ -207,25 +209,29 @@ public class WorkArrays {
         int temp=arr[indexMin];
         arr[indexMin]=arr[indexMax];
         arr[indexMax]=temp;
+        System.out.println("Полученный массив : ");
         for (int item:arr){
             System.out.print(item);
             System.out.print(" ");
         }
+        System.out.println();
     }
 
     public void deleteMaxAndMin() {  //убираем максимум и минимум
         int indexMax = 0;
         int indexMin = 0;
-        for (int item : arr) {
+        System.out.println("Убираем максимум и минимум");
+        System.out.println("Исходный массив: ");
+        for (int item : arr) {                //вывод массива
             System.out.print(item);
             System.out.print(" ");
         }
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {  //находим максимум
             if (arr[i] < arr[indexMin]) {
                 indexMin = i;
             }
         }
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) { //находим минимум
             if (arr[i] > arr[indexMax]) {
                 indexMax = i;
             }
@@ -233,25 +239,21 @@ public class WorkArrays {
         System.out.println();
         System.out.println("Min element : " + arr[indexMin]);
         System.out.println("Max element : " + arr[indexMax]);
+        System.out.println("Полученный массив : ");
 
-
-        int count=arr.length;
-        int[] tempsArr = new int[indexMax];
-        for (int i=0;i<count-1;i++) {
-
-            if(arr[i]==arr[indexMax]){
-                tempsArr[i]=0;
+        for (int i=0;i<arr.length-2;i++) {                //удаляем максимум и минимум
+            if(arr[i]==arr[indexMax]||arr[i]==arr[indexMin]){
+                if(arr[i+1]==arr[indexMax]||arr[i+1]==arr[indexMin]){
+                    arr[i+1]=arr[i+2];
+                }
+                arr[i]=arr[i+1];
             }
-            else{
-                tempsArr[i]=arr[i];
-            }
-
-           System.out.print(tempsArr[i]);
+           System.out.print(arr[i]);
             System.out.print(" ");
         }
-
-
     }
+
+
 
 
 }

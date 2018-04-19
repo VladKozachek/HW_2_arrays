@@ -29,5 +29,6 @@ public class Main {
         workArrays2.concatenatingArrays();
         workArrays.replacMaxByMin();
         workArrays.deleteMaxAndMin();
+
     }
 }
